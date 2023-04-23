@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Edit an Animal:</h1>
+    <form action="/animals/<%=animals.id%>?_method=PUT" method="POST">
+    Species: <input type="text" name="species" value="<%= animals.species %>">
+    Extinct: <input type = "checkbox" name ="extinct" animal.extinct ? "checked" : "" %> />
+    <br>
+    Location: <input type="text" name="location" value="<%= animals.location %>">
+    Life Expectancy: <input type="text" name="lifeExpectancy" value="<%= animals.lifeExpectancy %>">
+    <br>
+    <input type="submit" value="submit"/>
+    <button type="button"><a href="/animals" style="text-decoration: none; color: black;">Back</a></button>
+    </form>
+    <form action="/animals/<%=animals._id%>?_method=DELETE" method="POST">
+        <input type="submit" value="Delete Animal">
+        </form>
+</body>
+</html>
